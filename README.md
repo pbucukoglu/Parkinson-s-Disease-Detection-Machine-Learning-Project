@@ -1,70 +1,85 @@
+# Parkinson’s Disease Detection with Machine Learning
 
-# 🧠 Parkinson's Disease Detection | Machine Learning Project
+This project focuses on the early diagnosis of Parkinson’s Disease using various machine learning models. The dataset includes biomedical voice measurements from people with and without Parkinson's Disease.
 
-## **English Version**
+## 📁 Project Structure
 
-This project performs exploratory data analysis (EDA) on voice data for early detection of Parkinson's disease and utilizes machine learning models, specifically Support Vector Machines (SVM) and K-Nearest Neighbors (KNN), for classification. This project is currently in development and is not yet complete.
-
-### 📚 Dataset
-
-The dataset used in this project can be accessed from the following link:
-- [Parkinson's Disease Dataset Analysis](https://www.kaggle.com/datasets/rabieelkharoua/parkinsons-disease-dataset-analysis)
-
-This dataset contains biomedical voice measurements and corresponding Parkinson's disease diagnoses.
-
-### 📁 Project Structure
 ```
-├── Parkinsons_EDA_SVM_KNN.ipynb      # EDA and modeling work
-├── parkinsons_disease_data.csv      # Dataset used for analysis
-├── README.md                        # Project description
+├── Parkinsons_Final.ipynb         # Main Jupyter notebook
+├── parkinsons_disease_data.csv    # Dataset
+├── FinalReport.pdf                # IEEE-format final report
+└── README.md                      # Project overview
 ```
 
-### ⚙️ Installation
+## 🧠 Objective
 
-Required Python libraries:
-```bash
-pip install pandas numpy scikit-learn matplotlib seaborn
-```
+To develop and compare machine learning models that can accurately classify whether a person has Parkinson’s Disease based on vocal features.
 
-### 🚀 Usage
+## 📊 Dataset
 
-The project is still under development. You can view the current work by opening the notebook `Parkinsons_EDA_SVM_KNN.ipynb` in Jupyter.
+- **Samples:** 195 instances
+- **Features:** 23 biomedical voice measurements (e.g., MDVP:Fo(Hz), MDVP:Jitter(%), etc.)
+- **Target:** `status` (1 = Parkinson’s, 0 = healthy)
 
-### 📌 Note
+## 🧹 Data Preprocessing
 
-This project is currently incomplete and is not open source. Unauthorized use or distribution is prohibited.
+- Handled missing and outlier values
+- Scaled features for consistency
+- Applied **SMOTE** to handle class imbalance
+
+## 🔍 Exploratory Data Analysis (EDA)
+
+- Correlation heatmaps
+- Distribution plots of key features
+- Class imbalance visualization
+
+## 🤖 Models Used
+
+| Model               | Description                          |
+|--------------------|--------------------------------------|
+| Logistic Regression| Baseline linear classifier           |
+| SVM                | Support Vector Machine with kernels  |
+| KNN                | K-Nearest Neighbors                  |
+| Decision Tree      | Tree-based classification            |
+| Random Forest      | Ensemble of decision trees           |
+| Voting Classifier  | Combines top-performing models       |
+
+## 🎯 Evaluation Metrics
+
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Confusion Matrix
+
+## 🏆 Results
+
+- The **Voting Classifier** (ensemble of SVM, KNN, and Random Forest) achieved the best results.
+- **SMOTE** significantly improved model performance by balancing the dataset.
+
+## 📄 Final Report
+
+The full analysis and methodology can be found in the included PDF file: [`FinalReport.pdf`](./FinalReport.pdf)
+
+## 📚 Requirements
+
+- Python 3.7+
+- pandas
+- numpy
+- scikit-learn
+- seaborn
+- matplotlib
+- imbalanced-learn
+
+## 👨‍💻 Author
+
+- Your Name – `@yourhandle`  
+  For academic and educational purposes.
+
+## 📌 Note
+
+This project was developed as part of the **BİL443 – Pattern Recognition** course.
 
 ---
 
-## **Türkçe Versiyon**
-
-Bu proje, Parkinson hastalığının erken tespiti için ses verileri üzerinde keşifsel veri analizi (EDA) yapar ve sınıflandırma için özellikle Destek Vektör Makineleri (SVM) ve K-En Yakın Komşu (KNN) makine öğrenmesi modellerini kullanır. Bu proje şu an geliştirilme aşamasında olup henüz tamamlanmamıştır.
-
-### 📚 Veri Seti
-
-Bu projede kullanılan veri setine şu bağlantıdan erişilebilir:
-- [Parkinson Hastalığı Veri Seti Analizi](https://www.kaggle.com/datasets/rabieelkharoua/parkinsons-disease-dataset-analysis)
-
-Bu veri seti, biyomedikal ses ölçümleri ve karşılık gelen Parkinson hastalığı teşhislerini içerir.
-
-### 📁 Proje Yapısı
-```
-├── Parkinsons_EDA_SVM_KNN.ipynb      # EDA ve modelleme çalışması
-├── parkinsons_disease_data.csv      # Analiz için kullanılan veri seti
-├── README.md                        # Proje açıklaması
-```
-
-### ⚙️ Kurulum
-
-Gerekli Python kütüphaneleri:
-```bash
-pip install pandas numpy scikit-learn matplotlib seaborn
-```
-
-### 🚀 Kullanım
-
-Proje hala geliştirilme aşamasındadır. Mevcut çalışmaları `Parkinsons_EDA_SVM_KNN.ipynb` not defterini Jupyter'de açarak görüntüleyebilirsiniz.
-
-### 📌 Not
-
-Bu proje şu an tamamlanmamış olup açık kaynak değildir. İzin alınmadan kullanımı veya dağıtımı yasaktır.
+Feel free to fork, modify, and share!
