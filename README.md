@@ -71,15 +71,3 @@ The full analysis and methodology can be found in the included PDF file: [`Final
 - matplotlib
 - imbalanced-learn
 
-## 👨‍💻 Author
-
-- Your Name – `@yourhandle`  
-  For academic and educational purposes.
-
-## 📌 Note
-
-This project was developed as part of the **BİL443 – Pattern Recognition** course.
-
----
-
-Feel free to fork, modify, and share!
